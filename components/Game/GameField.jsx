@@ -1,14 +1,18 @@
 'use client';
 
 import clsx from 'clsx';
-import { useGameState } from '../../hooks/useGameState';
 
 import { UiButton } from '../UI/uiButton';
 import { GameSymbol } from './GameSymbol';
 
-export function GameField({ className }) {
-  const { cells, currentMove, handleCellClick, nextMove } = useGameState();
-
+export function GameField({
+  className,
+  cells,
+  currentMove,
+  handleCellClick,
+  nextMove,
+  playersCount,
+}) {
   const actions = (
     <>
       <UiButton size='md' variant='primary'>
